@@ -142,7 +142,7 @@ export default function ProfilePage() {
                   )}
 
                   <a
-                    href={`https://opencampus-codex.blockscout.com/address/${linkedAddress}`}
+                    href={`https://sepolia.lineascan.build/address/${linkedAddress}`}
                     className="text-gray-400 hover:text-gray-500"
                   >
                     <Wallet size={24} />
