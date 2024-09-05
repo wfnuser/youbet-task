@@ -7,11 +7,10 @@ import { Link } from 'react-router-dom'
 import { SkeletonCard } from '@/components/skeleton-card'
 import http from '@/service/instance'
 import { Button } from '@/components/ui/button'
-import { NetworkType, SDK } from 'youbet-sdk'
+import { SDK } from 'youbet-sdk'
+import { lineaTestOptions } from '@/constants/data'
 
-const sdk = new SDK({
-  networkType: NetworkType.Testnet,
-})
+const sdk = new SDK(lineaTestOptions)
 
 function SkeletonList() {
   return (
@@ -55,7 +54,7 @@ function TutorialItem({ item }: { item: Project }) {
               onClick={(e) => {
                 e.preventDefault()
                 e.stopPropagation()
-                sdk.contract.donateToProject(String(githubId), '0.01')
+                sdk.contract.donateToProject(String(githubId), '0.001')
               }}
             />
           </div>

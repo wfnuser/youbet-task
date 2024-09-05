@@ -1,4 +1,5 @@
 import { NavItem } from '@/types'
+import { SdkCtorOptions } from 'youbet-sdk'
 
 export const navItems: NavItem[] = [
   {
@@ -78,3 +79,12 @@ export const navItems: NavItem[] = [
     hideInMenu: true,
   },
 ]
+
+export const lineaTestOptions: SdkCtorOptions = {
+  networkOptions: {
+    contractAddress: '0x537AEB55b80a2361414318BF3BF8c2b340c212E7',
+    rpcUrl: 'https://rpc.sepolia.linea.build',
+    chainId: 59144,
+  },
+  chainName: 'Linea',
+}

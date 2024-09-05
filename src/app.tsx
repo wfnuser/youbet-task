@@ -8,6 +8,7 @@ import { WagmiProvider } from 'wagmi'
 import '@rainbow-me/rainbowkit/styles.css'
 import { Provider } from 'jotai'
 import { store } from './store'
+import { lineaSepolia } from 'viem/chains'
 
 // TODO: should be configured by the user
 const eduChain = {
@@ -29,7 +30,7 @@ const eduChain = {
 const config = getDefaultConfig({
   appName: 'Kuibu',
   projectId: '05c3ea68819376e65dc4a8802f90f41b',
-  chains: [eduChain],
+  chains: [lineaSepolia],
   ssr: true, // If your dApp uses server side rendering (SSR)
 })
 

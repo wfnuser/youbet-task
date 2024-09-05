@@ -11,16 +11,15 @@ import {
   BreadcrumbSeparator,
 } from '@/components/ui/breadcrumb'
 import http from '@/service/instance'
-import { NetworkType, SDK } from 'youbet-sdk'
+import { SDK } from 'youbet-sdk'
 import { TaskItem } from './task-item'
 import { EmptyTasks } from './empty-task'
 import { Input } from '@/components/ui/input'
 import { LucideSearch } from 'lucide-react'
 import { ToggleGroup, ToggleGroupItem } from '@/components/ui/toggle-group'
+import { lineaTestOptions } from '@/constants/data'
 
-const sdk = new SDK({
-  networkType: NetworkType.Testnet, // or NetworkType.Testnet
-})
+const sdk = new SDK(lineaTestOptions)
 
 function SkeletonTasks() {
   return (
